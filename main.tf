@@ -23,7 +23,7 @@ resource "aws_instance" "app_server" {
   vpc_security_group_ids = [aws_security_group.main.id]
 
   tags = {
-    Name = "First-Ec2-With-Terraform"
+    Name = "Second-Ec2-With-Terraform"
   }
   connection {
     type    = "ssh"
