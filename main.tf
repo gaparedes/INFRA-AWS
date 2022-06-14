@@ -64,5 +64,5 @@ resource "aws_security_group" "main" {
 
 resource "aws_key_pair" "deployer" {
   key_name   = "githubactions-aws-tf"
-  public_key = "ssh-rsa 38:89:ee:ce:ba:76:e2:ce:61:0d:2a:9a:1c:56:15:15:20:d1:f7:64"	
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDSC4so+8P5hitID6g32gIM2yrYjvD06FrWtNw9AeXZ6cjpe60qG4DIsUsmauxVqXFITcCwEANADXRdtXZO30vT2Ic4nz1K6RQSp3Ih1LU8aoFBcwxInnCRPRKuJunimx9gfYVDie0XDWWnVRXrPHlbRSPC450kJsz/gyLS0GEtZtwyCUcmBhVrsn0Z0b13GZrOlzyi1g14og8UIl6k6ZuuKCMOCq0q0q+lhhHm+8lLK2rgN6q0jQw+QnuGrfiwZvr8WLh3CgDMjN/B5uvyanEuJOIBTx7fHlrrH/GUTT6wnAQjjTLsYBW+RxIwBEv2kweDKeTL/nqPDzZBPH5wmdbp"	
 }
