@@ -20,7 +20,7 @@ resource "aws_instance" "app_server" {
   count                  = 2
   ami                    = "ami-0022f774911c1d690"
   instance_type          = "t2.micro"
-  key_name               = "ec2-deployer-key-pair"
+  key_name               = "githubactions-aws-tf"
   vpc_security_group_ids = [aws_security_group.main.id]
 
   tags = {
@@ -62,4 +62,7 @@ resource "aws_security_group" "main" {
   ]
 }
 
-
+resource "aws_key_pair" "deployer" {
+  key_name   = "githubactions-aws-tf"
+  public_key = "ssh-rsa 38:89:ee:ce:ba:76:e2:ce:61:0d:2a:9a:1c:56:15:15:20:d1:f7:64"	
+}
