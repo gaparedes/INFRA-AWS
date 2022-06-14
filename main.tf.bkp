@@ -20,6 +20,7 @@ resource "aws_instance" "app_server" {
   count                  = 2
   ami                    = "ami-0022f774911c1d690"
   instance_type          = "t2.micro"
+  key_name               = "githubactions-aws-tf"
   vpc_security_group_ids = [aws_security_group.main.id]
 
   tags = {
@@ -61,3 +62,7 @@ resource "aws_security_group" "main" {
   ]
 }
 
+resource "aws_key_pair" "deployer" {
+  key_name   = "githubactions-aws-tf"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDSC4so+8P5hitID6g32gIM2yrYjvD06FrWtNw9AeXZ6cjpe60qG4DIsUsmauxVqXFITcCwEANADXRdtXZO30vT2Ic4nz1K6RQSp3Ih1LU8aoFBcwxInnCRPRKuJunimx9gfYVDie0XDWWnVRXrPHlbRSPC450kJsz/gyLS0GEtZtwyCUcmBhVrsn0Z0b13GZrOlzyi1g14og8UIl6k6ZuuKCMOCq0q0q+lhhHm+8lLK2rgN6q0jQw+QnuGrfiwZvr8WLh3CgDMjN/B5uvyanEuJOIBTx7fHlrrH/GUTT6wnAQjjTLsYBW+RxIwBEv2kweDKeTL/nqPDzZBPH5wmdbp"	
+}
