@@ -17,7 +17,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "app_server" {
-  count                  = 3
+  count                  = 4
   ami                    = "ami-0022f774911c1d690"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.main.id]
